@@ -1,0 +1,28 @@
+<template name="serversList">
+
+	<h1>All Servers <small>... in all data centers.</small></h1>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>CPU</th>
+				<th>RAM</th>
+				<th>Hard-Disk Setup</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each servers}}
+				{{> serversItem}}
+			{{/each}}
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Total: <strong>{{serversCount}}</strong></td>
+			</tr>
+		</tbody>
+	</table>
+
+</template>
+

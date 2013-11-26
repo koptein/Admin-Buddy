@@ -1,0 +1,17 @@
+<template name="serversItem">
+
+	<tr>
+		<td>{{fqdn}} | {{serversLocation location}}</td>
+		<td>{{#with cpu}}{{cores}}&times; {{speed}} ({{type}}){{/with}}</td>
+		<td>{{ram}}GB</td>
+		<td>
+			<ol>
+				{{#each hdd}}
+					<li>{{this}}</li>
+				{{/each}}
+			</ol>
+		</td>
+	</tr>
+
+</template>
+
