@@ -15,3 +15,15 @@ if Servers.find().count() is 0
 			"2x 120GB SSD RAID1"]
 		"location": Locations.findOne({"name": "Home"})['_id']
 
+
+if Networks.find().count() is 0
+
+	Networks.insert
+		"name": "local"
+		"gateway": "192.168.0.1"
+		"net_id" : "192.168.0.1"
+		"subnetmask": "255.255.255.0"
+		"interfaces": [
+			"eth0": "aa:bb:bb:bb:bb"
+			"eth1": "bb:bb:bb:bb:bb"
+		]
