@@ -1,0 +1,28 @@
+<template name="networksList">
+
+	<h1>Networks</h1>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Net ID</th>
+				<th>Subnet Mask</th>
+				<th>Gateway</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each networks}}
+				{{> networksItem}}
+			{{/each}}
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Total: <strong>{{networksCount}}</strong></td>
+			</tr>
+		</tbody>
+	</table>
+
+</template>
+

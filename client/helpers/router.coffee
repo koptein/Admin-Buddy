@@ -17,6 +17,10 @@ Router.map ->
 	@route 'serversList'
 
 	@route 'serversAdd'
+	
+	@route 'networksList'
+
+	@route 'networksAdd'
 
 	@route 'login'
 
