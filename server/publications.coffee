@@ -1,6 +1,8 @@
 Meteor.publish 'locations', ->
-	Locations.find {}
+	if @userId
+		Locations.find {}
 
 Meteor.publish 'servers', ->
-	Servers.find {}
+	if @userId
+		Servers.find {}
 
