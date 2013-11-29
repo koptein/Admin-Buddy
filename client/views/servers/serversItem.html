@@ -7,7 +7,7 @@
 				<span class="label label-info">{{this}}</span>
 			{{/each}}
 		</td>
-		<td>{{#with cpu}}{{cores}}&times; {{speed}} ({{type}}){{/with}}</td>
+		<td>{{#with cpu}}{{cores}}&times; {{speed}} GHz <small>({{type}})</small>{{/with}}</td>
 		<td>{{ram}}GB</td>
 		<td>
 			<ol>
@@ -15,6 +15,11 @@
 					<li>{{this}}</li>
 				{{/each}}
 			</ol>
+		</td>
+		<td>
+			<div class="btn-group">
+				<button id="{{_id}}" class="change btn btn-small"><i class="icon-edit"></i> Change</button>
+				<button id="{{_id}}" class="delete btn btn-small"><i class="icon-remove-sign"></i> Delete</button>
 		</td>
 	</tr>
 
