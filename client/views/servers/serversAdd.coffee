@@ -6,7 +6,7 @@ Template.serversAdd.events
 
 		# Get the address data from the modal and try to create a new Address.
 		insert =
-			location: "dbZ5XbbhTghYh6aeR"
+			location: Locations.findOne('name': "Home")._id
 			ram: t.find('#inputRam').value
 			fqdn: t.find('#inputFqdn').value
 			cpu:
