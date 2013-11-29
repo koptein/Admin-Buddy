@@ -14,6 +14,11 @@ if Servers.find().count() is 0
 		"hdd": [
 			"2x 120GB SSD RAID1"]
 		"location": Locations.findOne({"name": "Home"})['_id']
+		"tags": [
+			"HWR"
+			"mail"
+			"http"
+			"mysql"]
 
 
 if Networks.find().count() is 0
