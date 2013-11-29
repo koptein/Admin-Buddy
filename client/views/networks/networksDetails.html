@@ -1,28 +1,28 @@
-<template name="networksAdd">
+<template name="networksDetails">
 
-	<h1>Add a Network <small>... because networks are effing awesome.</small></h1>
+	<h1>Network Details <small>... view and change details of this network.</small></h1>
 
 	<form class="form form-horizontal">
-		<legend>New network</legend>
+		<legend>{{Name}}</legend>
 
 		<div class="control-group">
 			<label class="control-label" for="inputName">Name</label>
 			<div class="controls">
-				<input type="text" id="inputName" placeholder="A descriptive network name..." value="">
+				<input type="text" id="inputName" placeholder="Name" value="{{name}}">
 			</div>
 		</div>
 
 		<div class="control-group">
-			<label class="control-label" for="inputNetId">Network-ID</label>
+			<label class="control-label" for="inputNetId">Net ID</label>
 			<div class="controls">
-				<input type="text" id="inputNetId" placeholder="Net-ID with CIDR notation..." value="">
+				<input type="text" id="inputNetId" placeholder="Net ID" value="{{net_id}}">
 			</div>
 		</div>
 
 		<div class="control-group">
 			<label class="control-label" for="inputGateway">Gateway</label>
 			<div class="controls">
-				<input type="text" id="inputGateway" placeholder="The dedicated gateway..." value="">
+				<input type="text" id="inputGateway" placeholder="Gateway" value="{{gateway}}">
 			</div>
 		</div>
 
@@ -34,3 +34,4 @@
 	</form>
 
 </template>
+

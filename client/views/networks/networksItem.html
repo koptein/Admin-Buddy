@@ -4,7 +4,12 @@
 		<td>{{name}}</td>
 		<td>{{net_id}}</td>
 		<td>{{gateway}}</td>
-		<td><button id="{{_id}}" class="show-free-ips btn btn-small"><i class="icon-list"></i> Free IPs</button></td>
+		<td>
+			<div class="btn-group">
+				<button id="{{_id}}" class="change btn btn-small"><i class="icon-edit"></i> Change</button>
+				<button id="{{_id}}" class="show-free-ips btn btn-small"><i class="icon-list"></i> Free IPs</button>
+			</div>
+		</td>
 	</tr>
 
 </template>

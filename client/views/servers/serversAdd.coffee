@@ -5,7 +5,7 @@ Template.serversAdd.events
 	'click button.save': (e, t) ->
 
 		# Get the address data from the modal and try to create a new Address.
-		insert = 
+		insert =
 			location: "dbZ5XbbhTghYh6aeR"
 			ram: t.find('#inputRam').value
 			fqdn: t.find('#inputFqdn').value

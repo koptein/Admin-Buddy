@@ -1,4 +1,7 @@
 Template.networksItem.events
 	'click button.show-free-ips': (e, t) ->
-		console.log "Show free IPs for network #{@_id}"
+		alert "Show free IPs for network \"#{@name}\""
+
+	'click button.change': (e, t) ->
+		Router.go 'networksDetails', _id: @_id
 

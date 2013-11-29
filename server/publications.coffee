@@ -18,3 +18,11 @@ Meteor.publish 'networks', ->
 	if @userId
 		Networks.find {}
 
+Networks.allow
+	insert: (userId) ->
+		userId
+	update: (userId) ->
+		userId
+	remove: (userId) ->
+		userId
+
