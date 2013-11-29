@@ -1,13 +1,12 @@
 <template name="networksList">
 
-	<h1>Networks</h1>
+<h1>Networks <small> All networks in all datacenters.</small></h1>
 
 	<table class="table table-hover">
 		<thead>
 			<tr>
 				<th>Name</th>
 				<th>Net ID</th>
-				<th>Subnet Mask</th>
 				<th>Gateway</th>
 			</tr>
 		</thead>
@@ -16,10 +15,9 @@
 				{{> networksItem}}
 			{{/each}}
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
 				<td>Total: <strong>{{networksCount}}</strong></td>
+				<td></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
