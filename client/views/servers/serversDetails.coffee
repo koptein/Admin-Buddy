@@ -29,6 +29,8 @@ Template.serversDetails.events
 		Servers.update t.data._id, $set: 'tags': t.data.tags
 	'keypress input.addTag': (e,t) ->
 		if e.charCode == 13
+			if (typeof t.data.tags) == 'undefined'
+				t.data.tags = []
 			t.data.tags.push(t.find('#addTag').value)
 			Servers.update t.data._id, $set: 'tags': t.data.tags
 
