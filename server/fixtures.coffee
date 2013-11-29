@@ -19,11 +19,12 @@ if Servers.find().count() is 0
 if Networks.find().count() is 0
 
 	Networks.insert
-		"name": "local"
+		"name": "Office Berlin"
 		"gateway": "192.168.0.1"
-		"net_id" : "192.168.0.1"
-		"subnetmask": "255.255.255.0"
-		"interfaces": [
-			"eth0": "aa:bb:bb:bb:bb"
-			"eth1": "bb:bb:bb:bb:bb"
-		]
+		"net_id" : "192.168.0.0/24"
+
+	Networks.insert
+		"name": "Backnet Frankfurt"
+		"gateway": "172.16.0.1"
+		"net_id" : "172.16.0.0/24"
+
