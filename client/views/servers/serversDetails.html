@@ -1,49 +1,44 @@
-<template name="serversAdd">
+<template name="serversDetails">
 
-	<h1>Add a Server <small>... manually, or by parsing Facter's YAML output.</small></h1>
+	<h1>Serverdetails <small>... view and change a servers details.</small></h1>
 
 	<form class="form form-horizontal">
-		<legend>New server</legend>
+		<legend>{{fqdn}}</legend>
 
 		<div class="control-group">
-			<label class="control-label" for="inputFqdn">FQDN</label>
+			<label class="control-label" for="inputLocation">Location</label>
 			<div class="controls">
-				<input type="text" id="inputFqdn" placeholder="The servers full name..." value="">
+				<input type="text" id="inputLocation" placeholder="Location" value="{{location}}">
 			</div>
 		</div>
 
 		<div class="control-group">
 			<label class="control-label" for="inputRam">RAM</label>
 			<div class="controls">
-				<input type="text" id="inputRam" placeholder="The amount of RAM in GB..." value="">
+				<input type="text" id="inputRam" placeholder="RAM" value="{{ram}}">
 			</div>
 		</div>
 
+		{{#with cpu}}
 		<div class="control-group">
 			<label class="control-label" for="inputCpuCores">CPU cores</label>
 			<div class="controls">
-				<input type="text" id="inputCpuCores" placeholder="CPU cores..." value="">
+				<input type="text" id="inputCpuCores" placeholder="CPU cores" value="{{cores}}">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputCpuSpeed">CPU speed</label>
 			<div class="controls">
-				<input type="text" id="inputCpuSpeed" placeholder="CPU speed..." value="">
+				<input type="text" id="inputCpuSpeed" placeholder="CPU speed" value="{{speed}}">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputCpuType">CPU type</label>
 			<div class="controls">
-				<input type="text" id="inputCpuType" placeholder="CPU type..." value="">
+				<input type="text" id="inputCpuType" placeholder="CPU type" value="{{type}}">
 			</div>
 		</div>
-
-		<div class="control-group">
-			<label class="control-label" for="inputHdd">HDD</label>
-			<div class="controls">
-				<input type="text" id="inputHdd" placeholder="Description of Hard disk setup..." value="">
-			</div>
-		</div>
+		{{/with}}
 
 		<div class="form-actions">
 			<button type="button" class="save btn btn-primary">Save changes</button>

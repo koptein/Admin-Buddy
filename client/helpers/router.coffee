@@ -15,11 +15,14 @@ Router.map ->
 		template: 'serversList'
 
 	@route 'serversList'
-
 	@route 'serversAdd'
-	
-	@route 'networksList'
+	@route 'serversDetails',
+		path: '/server/:_id/details'
+		template: 'serversDetails'
+		data: ->
+			Servers.findOne @params._id
 
+	@route 'networksList'
 	@route 'networksAdd'
 
 	@route 'login'
