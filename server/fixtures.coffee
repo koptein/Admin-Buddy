@@ -15,10 +15,10 @@ if Servers.find().count() is 0
 			"2x 120GB SSD RAID1"]
 		"location": Locations.findOne({"name": "Home"})['_id']
 		"tags": [
-			"HWR"
-			"mail"
-			"http"
-			"mysql"]
+			"Firewall"
+			"pfSense"
+			"OpenVPN"
+		]
 
 
 if Networks.find().count() is 0

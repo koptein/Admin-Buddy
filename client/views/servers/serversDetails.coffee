@@ -6,6 +6,7 @@ Template.serversDetails.events
 
 		# Get the address data from the modal and try to create a new Address.
 		update = 
+			fqdn: t.find('#inputFqdn').value
 			location: t.find('#inputLocation').value
 			ram: t.find('#inputRam').value
 			cpu:
