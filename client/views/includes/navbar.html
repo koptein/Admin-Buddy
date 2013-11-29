@@ -14,17 +14,13 @@
 			<div class="nav-collapse collapse">
 				<ul class="nav">
 					{{#if currentUser}}
-						<li class="{{activeRouteClass 'home' 'newPosts'}}">
+						<li class="{{activeRouteClass 'home' 'serversList'}}">
 							<a href="{{pathFor 'serversList'}}">Servers</a>
 						</li>
-					{{/if}}
-					{{#if currentUser}}
-						<li class="{{activeRouteClass 'bestPosts'}}">
+						<li class="{{activeRouteClass 'serversAdd'}}">
 							<a href="{{pathFor 'serversAdd'}}">Add Server</a>
 						</li>
-					{{/if}}
-					{{#if currentUser}}
-						<li class="{{activeRouteClass 'bestPosts'}}">
+						<li class="{{activeRouteClass 'networksList'}}">
 							<a href="{{pathFor 'networksList'}}">Networks</a>
 						</li>
 					{{/if}}
