@@ -24,13 +24,22 @@ Template.serversDetails.events
 	'click button.cancel': (e, t) ->
 		Router.go 'serversList'
 
-	'click i.icon-remove': (e,t) ->
+	'click i.icon-remove': (e, t) ->
 		t.data.tags = _.without(t.data.tags, _.findWhere(t.data.tags, @))
 		Servers.update t.data._id, $set: 'tags': t.data.tags
-	'keypress input.addTag': (e,t) ->
+
+	'keypress input.addTag': (e, t) ->
 		if e.charCode == 13
-			if (typeof t.data.tags) == 'undefined'
+			if typeof t.data.tags is 'undefined'
 				t.data.tags = []
 			t.data.tags.push(t.find('#addTag').value)
 			Servers.update t.data._id, $set: 'tags': t.data.tags
+
+	'mouseenter span.label': (e, t) ->
+		# Change class to label-important
+		console.log "Mouse enters tag \"#{@}\""
+
+	'mouseleave span.label': (e, t) ->
+		# Change class to label-info
+		console.log "Mouse left tag \"#{@}\""
 
