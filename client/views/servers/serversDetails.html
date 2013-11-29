@@ -47,6 +47,20 @@
 		</div>
 		{{/with}}
 
+		<div class="control-group">
+			<label class="control-label" for="Tags">Tags</label>
+			<div class="controls">
+				{{#each tags}}
+					<span class="label tag" id={{this}}>{{this}} <i class="icon-remove"></i></span>
+				{{/each}}
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="addTags">Add Tags</label>
+			<div class="controls">
+				<input type="text" id="addTag" class="addTag" placeholder="Tag" value="">
+			</div>
+		</div>
 		<div class="form-actions">
 			<button type="button" class="save btn btn-primary">Save changes</button>
 			<button type="button" class="cancel btn">Cancel</button>
